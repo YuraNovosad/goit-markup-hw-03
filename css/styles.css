@@ -58,8 +58,8 @@ body {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  padding-right: 15px;
-  padding-left: 15px;
+  /* padding-right: 15px;
+  padding-left: 15px; */
 }
 
 /* header */
@@ -166,10 +166,9 @@ body {
 /* Section hero */
 .hero {
   background-color: var(--backgraund-color-footer);
-  height: 600px;
   text-align: center;
-  /* padding-top: 200px;
-  padding-bottom: 200px; */
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -208,9 +207,6 @@ body {
 
 /* section our-benefits*/
 
-.benefits-list {
-  display: flex;
-}
 
 .visually-hidden {
   position: absolute;
@@ -225,9 +221,29 @@ body {
   margin: -1px;
 }
 
+.benefits-list {
+   display: flex;
+   /* outline: 1px solid tomato; */
+   margin-left: -30px;
+   justify-content: center;
+}
+
+.benefits-list .item{
+   flex-basis: calc(100% / 4 - 30px);
+   margin-left: 30px;
+}
+
+.benefits-list .item:first-child{
+   margin-left: 0px;
+}
+
+/* .benefits-list .item{
+   flex-basis: 270px;
+}
+
 .benefits-list .item:not(:last-child) {
   margin-right: 30px;
-}
+} */
 
 .title-benefits {
   margin-bottom: 10px;
@@ -344,6 +360,8 @@ body {
 .button-filter {
   padding-top: 6px;
   padding-bottom: 6px;
+  padding-right: 22px;
+  padding-left: 22px;
   background-color: var(--background-color-second);
   color: var(--title-text-color);
   border: none;
@@ -356,10 +374,17 @@ body {
   cursor: pointer;
 }
 
+.button-wide{
+   padding-right: 25px;
+   padding-left: 25px;
+}
+
 .button-filter:hover,
 .button-filter:focus {
   background-color: var(--accent-color);
   color: var(--accent-color-text);
+  /* padding-right: 25px;
+  padding-left: 25px; */
 }
 
 .projects-list {
